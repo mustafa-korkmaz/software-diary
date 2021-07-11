@@ -9,10 +9,11 @@ In this pattern, a class has only one instance in the program that provides a gl
 - Provides a single point of access to a particular instance, so it is easy to maintain.
 
 ## Disadvantages
-- Diffucult unit testing
-- Requires locking for thread safety
+- Diffucult unit testing. The more you separate object creation from business logic the easier/better you test your code. Singleton classes prevent this by their nature.
+- Requires locking for thread safety hence bad when used with multi-threading.
 
 
 #### References
 - [c-sharpcorner](https://www.c-sharpcorner.com/UploadFile/8911c4/singleton-design-pattern-in-C-Sharp/) 
 - [dofactory](https://dofactory.com/net/singleton-design-pattern) 
+- [dzone](https://dzone.com/articles/singleton-anti-pattern)
