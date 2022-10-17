@@ -1,4 +1,26 @@
-﻿abstract class Payment
+﻿
+class Program
+{
+    static void Main(string[] args)
+    {
+        var paymentInfo = new PaymentInfo
+        {
+            AccountHolderIban = "TR12345",
+            AccountHolderName = "Mustafa Korkmaz",
+            CreditCardNumber = "MasterCard12345"
+        };
+
+        var factory = new PaymentFactory();
+
+        var stripePayment = factory.GetPayment(PaymentOption.Stripe);
+        var payPalPayment = factory.GetPayment(PaymentOption.PayPal);
+
+        stripePayment.DoPayment(paymentInfo); // Stripe payment completed for Mustafa Korkmaz by using card MasterCard12345
+        payPalPayment.DoPayment(paymentInfo); // PayPal money transfer completed. Account Holder: Mustafa Korkmaz, IBAN: TR12345
+    }
+}
+
+abstract class Payment
 {
     public abstract void DoPayment(PaymentInfo paymentInfo);
 }
@@ -44,26 +66,5 @@ class PaymentFactory
             default:
                 throw new ArgumentOutOfRangeException(nameof(paymentOption), paymentOption, null);
         }
-    }
-}
-
-class Program
-{
-    static void Main(string[] args)
-    {
-        var paymentInfo = new PaymentInfo
-        {
-            AccountHolderIban = "TR12345",
-            AccountHolderName = "Mustafa Korkmaz",
-            CreditCardNumber = "MasterCard12345"
-        };
-
-        var factory = new PaymentFactory();
-        
-        var stripePayment = factory.GetPayment(PaymentOption.Stripe);
-        var payPalPayment = factory.GetPayment(PaymentOption.PayPal);
-
-        stripePayment.DoPayment(paymentInfo); // Stripe payment completed for Mustafa Korkmaz by using card MasterCard12345
-        payPalPayment.DoPayment(paymentInfo); // PayPal money transfer completed. Account Holder: Mustafa Korkmaz, IBAN: TR12345
     }
 }
