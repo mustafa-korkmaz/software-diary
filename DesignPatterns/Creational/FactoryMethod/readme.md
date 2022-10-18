@@ -1,5 +1,5 @@
 ## What?
-Factory method is one of the most widely used creational design pattern uses _factory methods_ while creating different objects. It defines the interface for object creation and lets subclasses decide which class to instantiate.
+Factory method is one of the most widely used creational design patterns uses _factory methods_ while creating different objects. It defines the interface for object creation and lets subclasses decide which class to instantiate.
 
 **Frequency of use**: :star::star::star::star::star: (High)
  
