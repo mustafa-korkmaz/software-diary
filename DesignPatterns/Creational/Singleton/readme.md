@@ -5,7 +5,7 @@ Singleton is a design pattern implemented inside a class which has only one inst
  
 ## Advantages
 - Can implement interfaces.
-- Can be lazy-loaded and has static initialization.
+- Can be lazy-loaded and have static initialization.
 - Provides a single point of access to a particular instance, so it is easy to maintain.
 
 ## Disadvantages
