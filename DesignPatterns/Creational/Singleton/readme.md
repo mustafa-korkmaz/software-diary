@@ -9,7 +9,7 @@ Singleton is a design pattern implemented inside a class which has only one inst
 - Provides a single point of access to a particular instance, so it is easy to maintain.
 
 ## Disadvantages
-- Diffucult unit testing. The more you separate object creation from business logic the easier/better you test your code. Singleton classes prevent this by their nature.
+- Difficult unit testing. The more you separate object creation from business logic the easier/better you test your code. Singleton classes prevent this by their nature.
 - Requires locking for thread safety hence bad when used with multi-threading.
 
 ## Real-world study case

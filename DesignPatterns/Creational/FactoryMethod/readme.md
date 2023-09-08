@@ -2,7 +2,13 @@
 Factory method is one of the most widely used creational design patterns uses _factory methods_ while creating different objects. It defines the interface for object creation and lets subclasses decide which class to instantiate.
 
 **Frequency of use**: :star::star::star::star::star: (High)
- 
+
+## Components
+- Product (`Payment`)
+- ConcreteProduct (`StripePayment`)
+- Creator (Optional abstract factory class)
+- ConcreteCreator (`PaymentFactory`)
+
 ## Advantages
 - Hides the object instantiation and allows loose coupling 
 - Can be used as static method depending on the need
