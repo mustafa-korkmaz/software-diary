@@ -5,7 +5,7 @@ Factory method is one of the most widely used creational design patterns uses _f
 
 ## Components
 - Product (`Payment`)
-- ConcreteProduct (`StripePayment`)
+- ConcreteProduct (`StripePayment, PayPalPayment`)
 - Creator (Optional abstract factory class)
 - ConcreteCreator (`PaymentFactory`)
 
